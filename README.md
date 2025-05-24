@@ -29,3 +29,22 @@ Om användaren inte är inloggad och försöker nå `dashboard.html`, visas ett 
 | `register.html`    | Skapa konto via `POST`              | Nej       | Nej                        |
 | `login.html`       | Logga in och få JWT-token           | Nej       | Nej                        |
 | `dashboard.html`   | Visa skyddad resurs från backend    | Ja      | Ja (`Authorization: Bearer ...`) |
+
+
+## Användarguide – Så använder du webbapplikationen
+
+### 1. Registrera ett konto
+Navigera till `/src/pages/register.html`. Fyll i ett användarnamn och ett lösenord i formuläret och klicka på **"Skapa konto"**. Om registreringen lyckas visas ett bekräftelsemeddelande:  
+`Konto skapat! Du kan nu logga in.`
+
+### 2. Logga in
+Gå till `/src/pages/login.html`. Ange användarnamn och lösenord. Vid korrekt inloggning returnerar servern en JWT-token som sparas i `localStorage`. Användaren omdirigeras automatiskt till den skyddade sidan `dashboard.html`.
+
+### 3. Gå till skyddad sida
+Sidan `/src/pages/dashboard.html` kräver att en giltig token finns lagrad. Om så är fallet visas meddelandet:  
+`Du är inloggad och har åtkomst till skyddad data.`  
+Om token saknas eller är ogiltig visas ett fel och användaren skickas tillbaka till login.
+
+### 4. Logga ut
+På `dashboard.html` finns en **"Logga ut"**-knapp. Den rensar token från `localStorage` och skickar användaren tillbaka till login-sidan.
+
