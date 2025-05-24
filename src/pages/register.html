@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrera konto</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/src/styles/style.css">
+  <script type="module" src="/src/scripts/register.ts"></script>
+</head>
+<body>
+  <nav>
+    <a href="/src/pages/register.html" class="active">Registrera</a>
+    <a href="/src/pages/login.html">Logga in</a>
+    <a href="/src/pages/dashboard.html">Dashboard</a>
+  </nav>
+  <h1>Registrera konto</h1>
+  <form id="register-form">
+    <label>
+      Användarnamn:
+      <input type="text" id="username">
+    </label>
+    <label>
+      Lösenord:
+      <input type="password" id="password">
+    </label>
+    <button id="register-btn" type="submit" disabled>Skapa konto</button>
+  </form>
+
+  <div id="feedback"></div>
+</body>
+</html>
