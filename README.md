@@ -2,6 +2,13 @@
 
 Den här webbsidan är publicerad på Netlify. Den använder ett backend-API som hanterar registrering, inloggning samt autentisering av användare med hjälp av JWT (JSON Web Tokens). API:et ligger på Render och använder en NoSQL-databas (MongoDB Atlas) för att spara användarkonton. Webbsidan är byggd med Vite och TypeScript och använder Fetch API för kommunikation med backend.
 
+## Publicerad webbplats
+
+Uppgift 2 av frontend är publicerad via **Netlify** och Uppgift 1 av backend är publicerad via **Render**:
+
+- [Netlify](https://backend-moment42.netlify.app/)
+- [Backend-repo](https://github.com/SaraM47/backend-moment4.1)
+
 ## Beskrivning
 
 Användaren kan skapa ett konto via ett registreringsformulär. Därefter går det att logga in med användarnamn och lösenord. Om uppgifterna är korrekta returnerar API:et en JWT-token, som sparas i webbläsarens `localStorage`. Denna token används vid alla anrop till skyddade resurser. När användaren besöker en skyddad sida kontrolleras om token finns och är giltig. Om så är fallet visas innehållet – annars omdirigeras användaren till inloggningssidan.
