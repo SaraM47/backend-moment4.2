@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/src/styles/style.css">
+  <script type="module" src="/src/scripts/dashboard.ts"></script>
+  <script type="module" src="/src/scripts/authCheck.ts"></script>
+
+</head>
+<body>
+    <nav>
+        <a href="/src/pages/register.html">Registrera</a>
+        <a href="/src/pages/login.html">Logga in</a>
+        <a href="/src/pages/dashboard.html" class="active">Dashboard</a>
+      </nav>
+  <h1>Skyddad Dashboard</h1>
+  <div class="dashboard-content">
+  <p id="welcome-msg">Laddar data...</p>
+  <button id="logout-btn">Logga ut</button>
+  <h2>Lägg till favoritfilm</h2>
+  <form id="movie-form">
+    <label for="title">Filmtitel:</label>
+    <input type="text" id="title" placeholder="Ex: Inception">
+    
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" placeholder="Ex: Sci-fi">
+    <button type="submit">Lägg till</button>
+  </form>
+  <div id="movie-feedback" class="hidden"></div>
+  </div>
+</body>
+</html>
