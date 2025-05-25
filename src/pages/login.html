@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,24 @@
   <link rel="stylesheet" href="/src/styles/style.css">
   <script type="module" src="/src/scripts/login.ts"></script>
 </head>
+
 <body>
-    <nav>
-        <a href="/src/pages/register.html">Registrera</a>
-        <a href="/src/pages/login.html" class="active">Logga in</a>
-        <a href="/src/pages/dashboard.html">Dashboard</a>
-      </nav>
+  <nav>
+    <a href="/src/pages/register.html">Registrera</a>
+    <a href="/src/pages/login.html" class="active">Logga in</a>
+    <a href="/src/pages/dashboard.html">Dashboard</a>
+  </nav>
   <h1>Logga in</h1>
   <form id="login-form">
-    <label>
-      Användarnamn:
-      <input type="text" id="username">
-    </label>
-    <label>
-      Lösenord:
-      <input type="password" id="password">
-    </label>
+    <label for="username">Användarnamn:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Lösenord:</label>
+    <input type="password" id="password" name="password">
     <button type="submit">Logga in</button>
   </form>
 
-  <div id="feedback"></div>
+  <div id="feedback" style="display: none;"></div>
+
 </body>
+
 </html>
