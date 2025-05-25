@@ -64,7 +64,7 @@ form {
 
 label {
   display: block;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
   font-weight: bold;
 }
 
@@ -86,6 +86,7 @@ button {
   border-radius: 2rem;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 button:hover {
